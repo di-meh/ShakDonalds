@@ -63,3 +63,53 @@ Les ingredients sont payants ?
 Fin de journée contabilise argent gagné -> possibilité d'aller dans magasin 
 Magasin : Amelioration ou achat toppings
 
+Cahier des charges :
+Joueurs:
+	-creation compte
+	-connexion
+Caractéristiques:
+	-compte
+	-stocks
+	-magasin(acheter nv ingrédients, nvlles machines
+	-liste ingrédients
+	-fabriquer(burgers,...)
+	-cuire (steak, frites,...)
+Fabriquer:
+	-choisir ingrédients et les empiler dans l'ordre
+Cuire:
+	-choisir ingrédient à cuire, machine pour cuire, et temps de cuisson
+
+MCD:
+-Ingredient(idIngr,nom,prix)
+-Joueur(idJoueur, pseudo, mdp, compte, liste_ingredient)
+-Magasin(#idIngr
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
