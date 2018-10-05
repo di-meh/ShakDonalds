@@ -1,0 +1,65 @@
+Justine Juarez Bellais, Maxime Rivoal et Mehdi Saber vous présentent:
+
+Un site web ou application mobile
+Brainstorming:
+Bouteile d'eau Flip Challenge
+discussion en ligne 
+generateur de mot de passe, 
+recense les mdp, 
+proposition de jeu, 
+generateur de phrase de merde(pour draguer tmtc), 
+recenseur de toilettes publiques, 
+uber en deux roues (merci maxime), 
+differents types de pommes, 
+site de rencontre pour les geeks, 
+ia qui parle quand on se sent seul
+aide pour les autistes, 
+gulli(te dit comment t'habiller selon la meteo)
+trouver des enfants, 
+generateur de repartie(pour les gros lourds misogynes), 
+Un site internet qui génère un script de film aléatoire.Un site qui te propose des nouvelles musiques de manière journalière.
+Une appli qui te fais tes devoirs, 
+Une appli/site qui te donne de très mauvais conseils
+Photoshopper ta tête wesh
+Un générateur de chanson de rap, avec un refrain et tout le tintouin
+Une appli qui te complimente quand tu te sens pas bien 
+Un générateur de haikus.
+Un localisateur de police
+photoshop ta tete avec ta star
+Une application qui te force à travailler (te met dans le mood, avec un bruit de fond et tout le tintouin)
+Une application qui, quand tu prends ta photo, la rend dégueulasse.
+Une application qui te trouve des photos/vidéos de chat.
+
+Idee jeu :
+mini jeu avec base de données et php: 
+-wacdonald simulator
+-little alchemy
+-tetris
+-jeu ferme
+-
+
+
+
+Wacdonald Simulator :
+Plats :
+Burgers : 
+	-Pain
+	-Steack
+	-Fromage
+	-Tomate
+	-Salade
+Frites : 2 types ? Potatoes / frites
+Boissons / MilkShake ?
+
+
+
+Evolution du jeu:
+Debut commence avec 3/4 ingredients de base puis + gagne argent -> acheter toppings ou ameliorer cuisine
+Ajout de plats ? Burgers differents / potatoes 
+
+Se deroule en journée -> 5min 
+Vend un produit gagne de largent -> Moins si mal fait / ou cramé 
+Les ingredients sont payants ?
+Fin de journée contabilise argent gagné -> possibilité d'aller dans magasin 
+Magasin : Amelioration ou achat toppings
+
