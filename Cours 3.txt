@@ -66,7 +66,8 @@ Magasin : Amelioration ou achat toppings
 Cahier des charges :
 Joueurs:
 	-creation compte
-	-connexion
+	-connexion (arrive sur le menu du jeu si connexion réussie)
+	-
 Caractéristiques:
 	-compte
 	-stocks
@@ -79,10 +80,40 @@ Fabriquer:
 Cuire:
 	-choisir ingrédient à cuire, machine pour cuire, et temps de cuisson
 
+Dictionnaire des données:
+	-Ingrédient:
+		-Identifiant de l'ingrédient: idIngr
+		-Nom de l'ingrédient: nomIngr
+		-Prix de l'ingrédient: prixIngr
+		-Description de l'ingrédient: descIngr
+		???-débloquer un ingrédient ???
+	-Machine:
+		-Nom de la machine: nomMachine
+		-Prix de la machine: prixMachine
+		-Description: descMachine
+		???-débloquer une machine???
+	-Joueur:
+		-Identifiant du joueur: idJoueur
+		-Login du joueur: loginJoueur
+		-Mot de passe du joueur: mdpJoueur
+		-Pseudo du joueur: pseudoJoueur
+		-Argent du joueur: argentJoueur
+	-Achat/Magasin ingrédient:
+		-Identifiant de l'ingrédient: idIngr
+		-
+	-Achat/Magasin outils:
+		-Identifiant de la machine: idMachine
+		-
+	-Stock ingrédient:
+		-Identifiant du joueur: idJoueur
+		-Identifiant de l'ingrédient: idIngr
+		-Quantité de l'ingrédient stocké: quantiteStock
+		
 MCD:
--Ingredient(idIngr,nom,prix)
--Joueur(idJoueur, pseudo, mdp, compte, liste_ingredient)
--Magasin(#idIngr
+-Ingredient(idIngr, nomIngr, prixIngr)
+-Stock(#idJoueur, idIngr, quantiteStock)
+-Joueur(idJoueur, loginJoueur, mdpJoueur, pseudoJoueur, argentJoueur)
+-Magasin(#idIngr)
 
 
 
