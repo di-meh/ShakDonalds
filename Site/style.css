@@ -4,3 +4,68 @@ body{
 	font-family: 'Montserrat', "Alfa Slab One";
 }
 
+
+/*boutique*/
+
+#sectionB{
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 85%;
+	height: 850px;
+	margin:auto;
+}
+
+#sectionB h1{
+	color: white;
+	text-align: center;
+}
+#stats{
+	background-color: rgba(0, 0, 0, 0.5);
+	width: 30%;
+	float: right;
+	display: inline;
+	position: relative;
+	bottom: 100px;
+
+}
+
+#nouvelleP, #reprendreP{
+	background-color: #1f532f;
+	border: 1px solid #1f532f;
+	border-radius: 3px;
+	color: white;
+
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top:10px;
+	padding-bottom: 10px;
+	font-size: 20px;
+}
+
+#stats h1{
+	color: white;
+	text-align: center;
+
+}
+#profil{
+	width: 50px;
+
+}
+
+/*
+#crea
+{
+	margin-bottom: 20px;
+	text-decoration: none;
+	float: right;
+	position:relative;
+	left: 28%;
+	padding-left: 40px;
+	padding-right: 40px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	background-color: #D71F21;
+	border: 1px solid #D71F21;
+	border-radius: 3px;
+	color: white;
+*/
+
