@@ -9,6 +9,7 @@ body{
 
 #sectionB{
 	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 20px;
 	width: 85%;
 	height: 850px;
 	margin:auto;
@@ -18,36 +19,78 @@ body{
 	color: white;
 	text-align: center;
 }
-#stats{
+
+/*Menu*/
+
+div{
+	border: 1px solid red;
+}
+
+#menu h1{
+	text-align: center;
+}
+#boutons{
+	margin: auto;
+	margin-top: 200px;
+	width: 100%;
+	padding-top: 20px;
+	width: 300px;
+
+}
+
+#divStats{
 	background-color: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
 	width: 30%;
-	float: right;
-	display: inline;
-	position: relative;
-	bottom: 100px;
+	position: absolute;
+	right: 5px;
+	top:5px;
 
 }
 
 #nouvelleP, #reprendreP{
 	background-color: #1f532f;
 	border: 1px solid #1f532f;
-	border-radius: 3px;
+	border-radius: 10px;
 	color: white;
 
-	padding-left: 50px;
-	padding-right: 50px;
-	padding-top:10px;
-	padding-bottom: 10px;
+	padding-left: 100px;
+	padding-right: 100px;
+	padding-top:20px;
+	padding-bottom: 20px;
 	font-size: 20px;
+	margin-top: 20px;
+
+	/*animation*/
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+}
+#nouvelleP:hover, #reprendreP:hover{
+	background-color: #163B21;
 }
 
-#stats h1{
+#nouvelleP:active, #reprendreP:active{
+	background-color: #163B21;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+
+#divStats h1{
 	color: white;
 	text-align: center;
 
+
+}
+#stats{
+	margin-top: 50px;
+	color: white;
 }
 #profil{
 	width: 50px;
+	position: absolute;
+	left: 20px;
+	top:20px;
 
 }
 
@@ -68,4 +111,53 @@ body{
 	border-radius: 3px;
 	color: white;
 */
+
+/*bilan fin journée*/
+
+li{
+	padding-top: 10px;
+}
+#bilanGauche{
+	color: white;
+	font-size: 20px;
+	padding-left: 15px;
+	padding-top: 20px;
+
+}
+#bilanGauche p{
+	padding:20px;
+}
+
+#sousTotal, #total{
+	margin-top: 20px;
+}
+
+.trait1, .trait2{
+	margin-top: 60px;
+	background-color: white;
+	height: 1px;
+	width: 90%;
+}
+.trait2{
+	margin-top: 350px;
+}
+
+#sectionB h1{
+	padding-top: 20px;
+}
+
+/*connexion*/
+header h1{
+	text-align: center;
+
+}
+#co, #crea{
+
+	width: 45%;
+	display: inline-block;
+}
+#crea{
+	text-align: center;
+}
+
 
