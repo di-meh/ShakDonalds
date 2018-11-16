@@ -5,11 +5,29 @@
 	 <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
 	<meta charset = "UTF-8"/>
 	<title> WacDonald's </title>
-	<LINK href="style.css" rel="stylesheet" type="text/css"> 
+	<LINK href="style.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body onload="startGame()">
 	<SECTION id="sectionJeu">
-	
+		<script>
+			//Test du début de canvas
+			function startGame() {
+				myGameArea.start();
+			}
+			var myGameArea = {
+				canvas: document.createElement("canvas"),
+				start : function() {
+					this.canvas.width = 1280;
+					this.canvas.height = 720;
+					this.context = this.canvas.getContext("2d");
+					this.context.font = "50px Arial";
+					this.context.fillStyle = "yellow";
+					this.context.fillText("ShakDonalds", 480, 360);
+					
+					document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+				}
+			}
+		</script>
 	
 	</SECTION>
 
