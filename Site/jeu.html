@@ -6,30 +6,17 @@
 	<meta charset = "UTF-8"/>
 	<title> WacDonald's </title>
 	<LINK href="style.css" rel="stylesheet" type="text/css">
+
 </head>
 <body onload="startGame()">
 	<SECTION id="sectionJeu">
-		<script>
-			//Test du début de canvas
-			function startGame() {
-				myGameArea.start();
-			}
-			var myGameArea = {
-				canvas: document.createElement("canvas"),
-				start : function() {
-					this.canvas.width = 1280;
-					this.canvas.height = 720;
-					this.context = this.canvas.getContext("2d");
-					this.context.font = "50px Arial";
-					this.context.fillStyle = "yellow";
-					this.context.fillText("ShakDonalds", 480, 360);
-					
-					document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-				}
-			}
-		</script>
-	
+	<!-- Début d'un canvas écrit en Javascript, p-e le déclarer en élément HTML -->
+		<script type="text/javascript" src="script.js"></script>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)">
+			<img src="redsquare.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="50px">
+		</div>
+		<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 	</SECTION>
-
+	
 </body>
 </html>
