@@ -17,6 +17,8 @@ function Joueur(nom) {
 
 }
 
+var isInGame = false;
+
 //NOTE A SOI MEME: mettre les objects dans la meme classe.
 
 
