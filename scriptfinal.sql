@@ -1,7 +1,7 @@
 #------------------------------------------------------------
 #        Script MySQL.
 #------------------------------------------------------------
-
+use dutinfopw201636;
 drop table if exists StockMachine cascade;
 drop table if exists StockIngredient cascade;
 drop table if exists ingredients cascade;
