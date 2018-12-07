@@ -163,6 +163,7 @@ header h1{
 
 /*jeu*/
 
+
 canvas {
 	border: 1px solid #d3d3d3;
     background-color: black;
@@ -184,8 +185,23 @@ canvas {
 }
 
 #ingredients {
-	width: 280px;
-	height : 260px;
-	display: inline-block;
+	width: 100px;
+	height : 580px;
+	float: right;
 	border : 1px solid blue;
+	text-align: center;
+}
+
+#commandes {
+	width: 420px;
+	height: 160px;
+	border: 1px solid red;
+}
+
+#commandes, .divcont {
+	display: inline-block;
+	text-align: center;
+}
+.labels {
+	
 }

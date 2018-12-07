@@ -6,7 +6,7 @@
 	<meta charset = "UTF-8"/>
 	<title> WacDonald's </title>
 	<LINK href="style.css" rel="stylesheet" type="text/css">
-	
+	<!-- NOTE: faire en sorte que le jeu ne se lance pas si jamais le joueur n'est pas logged in -->
 </head>
 <body onload="startGame()">
 	<SECTION id="sectionJeu">
@@ -15,11 +15,22 @@
 		<script type="text/javascript" src="jeuSrc/script.js"></script>
 		
 		<div id="ingredients">
+			<p class="labels">Ingrédients</p>
 			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)">
-				<img src="redsquare.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="50px">
+				<img id="viandenoncuite" src="redsquare.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="50px">
 			</div>
-			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)">
-			</div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		</div>
+		<div id="commandes">
+			<p class="labels">Commandes</p>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+			<div class="divcont" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
 		</div>
 	</SECTION>
 	

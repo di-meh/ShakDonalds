@@ -71,9 +71,8 @@ myGameArea.canvas.addEventListener('click', function(evt) {
     
 	if (isInside(mousePos,rect)) {
 		testMain();
-    }else{
-        alert('Clique dans le rectangle jaune, espèce de gros débile');
-    }	
+    }
+
 }, false);
 
 
@@ -82,12 +81,21 @@ myGameArea.canvas.addEventListener('click', function(evt) {
 
 function testMain() {
 	myGameArea.clear();
-	myGameArea.context.font = "30px Montserrat";
+	/*myGameArea.context.font = "30px Montserrat";
 	myGameArea.context.fillStyle = "#ffdf23";
 	myGameArea.context.fillText("Nom : " + joueur.nom, myGameArea.canvas.width/4, myGameArea.canvas.height/5);
 	myGameArea.context.fillText("Score : " + joueur.score, myGameArea.canvas.width/4, myGameArea.canvas.height/4);
 	myGameArea.context.fillText("Argent : " + joueur.argent, myGameArea.canvas.width/4, myGameArea.canvas.height/3);
 	myGameArea.context.fillText("Niveau : " + joueur.niveau, myGameArea.canvas.width/4, myGameArea.canvas.height/2);
+	*/
+
+	//début du jeu
+
+	var img = new Image();
+	img.src = "redsquare.jpg";
+	var context = myGameArea.canvas.getContext("2d");
+	context.drawImage(img, 0, 0);
+
 }
 
 
