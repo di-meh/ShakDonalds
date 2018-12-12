@@ -19,6 +19,7 @@ function Joueur(nom) {
 
 var isInGame = false;
 
+
 //NOTE A SOI MEME: mettre les objects dans la meme classe.
 
 
@@ -72,6 +73,7 @@ myGameArea.canvas.addEventListener('click', function(evt) {
 	if (isInside(mousePos,rect)) {
 		testMain();
     }
+    
 
 }, false);
 
@@ -91,11 +93,15 @@ function testMain() {
 
 	//début du jeu
 
-	var img = new Image();
-	img.src = "redsquare.jpg";
+	var burger = new Image(20,20);
+	burger.src = "redsquare.jpg";
 	var context = myGameArea.canvas.getContext("2d");
-	context.drawImage(img, 0, 0);
+	context.drawImage(burger, 160, 20);
 
+}
+
+function testMain2() {
+	alert("Lol");
 }
 
 

@@ -10,7 +10,7 @@ body{
 #sectionB{
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 20px;
-	width: 85%;
+	width: 850px;
 	height: 850px;
 	margin:auto;
 }
@@ -22,11 +22,10 @@ body{
 
 /*Menu*/
 
-/*
 div{
 	border: 1px solid red;
 }
-*/
+
 #menu h1{
 	text-align: center;
 }
@@ -69,9 +68,35 @@ div{
 #nouvelleP:hover, #reprendreP:hover{
 	background-color: #163B21;
 }
-
 #nouvelleP:active, #reprendreP:active{
 	background-color: #163B21;
+  	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+}
+
+#deco{
+	background-color: #5E6770;
+	border: 1px solid #5E6770;
+	border-radius: 10px;
+	color: white;
+	padding-left: 50px;
+	padding-right: 50px;
+	padding-top:20px;
+	padding-bottom: 20px;
+	font-size: 20px;
+	margin-top: 20px;
+	position: absolute;
+	left: 5px;
+	top:5px;
+	/*animation*/
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+}
+#deco:hover{
+	background-color: #444B52;
+}
+#deco:active{
+	background-color: #444B52;
   	box-shadow: 0 5px #666;
   	transform: translateY(4px);
 }
@@ -80,8 +105,6 @@ div{
 #divStats h1{
 	color: white;
 	text-align: center;
-
-
 }
 #stats{
 	margin-top: 50px;
@@ -205,3 +228,6 @@ canvas {
 .labels {
 	
 }
+
+
+
