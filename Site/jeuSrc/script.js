@@ -17,19 +17,18 @@ function Joueur(nom) {
 
 }
 
+var burger = new Image();
+burger.src = "redsquare.jpg";
+
+var rectImage = {
+	x:160,
+	y:20,
+	width: 400,
+	height: 400
+
+};
+
 var isInGame = false;
-
-
-//NOTE A SOI MEME: mettre les objects dans la meme classe.
-
-
-//Main du canvas
-function startGame() {
-	joueur =  new Joueur("bonjour");
-	//Le reste
-	myGameArea.start();
-}
-
 
 var myGameArea = {
 	canvas: document.getElementById("canvasJeu"),
@@ -60,6 +59,17 @@ var myGameArea = {
 		this.context.fillText("Coming soon, blyat", this.canvas.width/2.75, this.canvas.height/1.5);
 		document.body.insertBefore(this.canvas, document.body.childNodes[0]);
 		*/
+
+		this.canvas.addEventListener('click', function(evt) {
+		var mousePos = getMousePos(myGameArea.canvas, evt);
+    
+			if (isInside(mousePos,rect)) {
+				testMain();
+		    }
+
+		}, false);
+
+		
 		},
 	clear : function() {
 		this.context.clearRect(0,0,this.canvas.width, this.canvas.height);
@@ -67,15 +77,13 @@ var myGameArea = {
 
 }
 
-myGameArea.canvas.addEventListener('click', function(evt) {
-	var mousePos = getMousePos(myGameArea.canvas, evt);
-    
-	if (isInside(mousePos,rect)) {
-		testMain();
-    }
-    
+//Main du canvas
+function startGame() {
+	//joueur =  new Joueur("bonjour");
+	myGameArea.start();
+}
 
-}, false);
+
 
 
 
@@ -83,7 +91,8 @@ myGameArea.canvas.addEventListener('click', function(evt) {
 
 function testMain() {
 	myGameArea.clear();
-	/*myGameArea.context.font = "30px Montserrat";
+	/*
+	myGameArea.context.font = "30px Montserrat";
 	myGameArea.context.fillStyle = "#ffdf23";
 	myGameArea.context.fillText("Nom : " + joueur.nom, myGameArea.canvas.width/4, myGameArea.canvas.height/5);
 	myGameArea.context.fillText("Score : " + joueur.score, myGameArea.canvas.width/4, myGameArea.canvas.height/4);
@@ -92,16 +101,33 @@ function testMain() {
 	*/
 
 	//début du jeu
+	//var context = myGameArea.canvas.getContext("2d");
+	//context.drawImage(burger, 160, 20);
+	context.beginPath();
+	context.rect(160,20,400,400);
+	context.fillStyle = '#ffdf23';
+	context.fill();
+	context.closePath();
 
-	var burger = new Image(20,20);
-	burger.src = "redsquare.jpg";
-	var context = myGameArea.canvas.getContext("2d");
-	context.drawImage(burger, 160, 20);
+	myGameArea.canvas.addEventListener('click', function(evt) {
+		var mousePos2 = getMousePos(myGameArea.canvas, evt);
+			
+		if (isInside(mousePos2,rectImage)) {
+			alert('lolol');
+			testMain2();
+		}
 
+	}, false);
+
+	
 }
 
+
+
+
+
 function testMain2() {
-	alert("Lol");
+	alert('Lol');
 }
 
 
