@@ -77,6 +77,16 @@ var myGameArea = {
 
 }
 
+//Variables du Snake
+px=py=10;
+gs=tc=20;
+ax=ay=15;
+xv=yv=0;
+trail=[];
+tail = 5;
+
+
+
 //Main du canvas
 function startGame() {
 	//joueur =  new Joueur("bonjour");
@@ -91,6 +101,8 @@ function startGame() {
 
 function testMain() {
 	myGameArea.clear();
+
+	testMainSnake();
 	/*
 	myGameArea.context.font = "30px Montserrat";
 	myGameArea.context.fillStyle = "#ffdf23";
@@ -100,8 +112,10 @@ function testMain() {
 	myGameArea.context.fillText("Niveau : " + joueur.niveau, myGameArea.canvas.width/4, myGameArea.canvas.height/2);
 	*/
 
+	/*
+
 	//début du jeu
-	//var context = myGameArea.canvas.getContext("2d");
+	var context = myGameArea.canvas.getContext("2d");
 	//context.drawImage(burger, 160, 20);
 	context.beginPath();
 	context.rect(160,20,400,400);
@@ -109,7 +123,9 @@ function testMain() {
 	context.fill();
 	context.closePath();
 
-	myGameArea.canvas.addEventListener('click', function(evt) {
+	*/
+
+	/*myGameArea.canvas.addEventListener('click', function(evt) {
 		var mousePos2 = getMousePos(myGameArea.canvas, evt);
 			
 		if (isInside(mousePos2,rectImage)) {
@@ -118,20 +134,80 @@ function testMain() {
 		}
 
 	}, false);
-
+*/
 	
 }
-
-
-
-
 
 function testMain2() {
 	alert('Lol');
 }
 
 
+/* Test de GameLoop avec un exemple: Snake*/
+function testMainSnake() {
+    document.addEventListener("keydown",keyPush);
+    setInterval(game,1000/15);
+}
 
+function game() {
+	canv=myGameArea.canvas;
+	ctx=myGameArea.context;
+    px+=xv;
+    py+=yv;
+    if(px<0) {
+        px= tc-1;
+    }
+    if(px>tc-1) {
+        px= 0;
+    }
+    if(py<0) {
+        py= tc-1;
+    }
+    if(py>tc-1) {
+        py= 0;
+    }
+    ctx.fillStyle="black";
+    ctx.fillRect(0,0,canv.width,canv.height);
+ 
+    ctx.fillStyle="lime";
+    for(var i=0;i<trail.length;i++) {
+        ctx.fillRect(trail[i].x*gs,trail[i].y*gs,gs-2,gs-2);
+        if(trail[i].x==px && trail[i].y==py) {
+            tail = 5;
+        }
+    }
+    trail.push({x:px,y:py});
+    while(trail.length>tail) {
+    trail.shift();
+    }
+ 
+    if(ax==px && ay==py) {
+        tail++;
+        ax=Math.floor(Math.random()*tc);
+        ay=Math.floor(Math.random()*tc);
+    }
+    ctx.fillStyle="red";
+    ctx.fillRect(ax*gs,ay*gs,gs-2,gs-2);
+}
+function keyPush(evt) {
+    switch(evt.keyCode) {
+        case 37:
+            xv=-1;yv=0;
+            break;
+        case 38:
+            xv=0;yv=-1;
+            break;
+        case 39:
+            xv=1;yv=0;
+            break;
+        case 40:
+            xv=0;yv=1;
+            break;
+    }
+}
+
+
+//Détection de sours à l'intérieur d'un rectangle
 function getMousePos(canvas, event) {
 	var rect = canvas.getBoundingClientRect();
 	return {
