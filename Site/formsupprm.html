@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xml:lang="fr" lang="fr">
+<head>
+ 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+ 	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
+	<meta charset = "UTF-8"/>
+	<title> WacDonald's </title>
+	<LINK href="style.css" rel="stylesheet" type="text/css"> 
+</head>
+<body>
+	<header>
+		<h1>Supprimer une machine</h1>
+	</header>
+
+</body>
+	<section>
+		<form method="post" action="index.php?module=admin&action=supprmachine">
+		<p>
+			<label>Identifiant machine à supprimer : </label> : <input type="texte" name="id"/>
+		</p>
+		<input type="submit" value="Supprimer" name="SupprimerMachine">
+
+		</form>
+		<p></p>
+		<p></p>
+		<form method="post" action="index.php?module=admin&action=menu">
+		<input type="submit" value="Retour" name="Retour menu">
+		</form>
+	</section>
+</html>
