@@ -195,9 +195,6 @@ canvas {
 	padding: 0;
 }
 
-#sectionJeu {
-	
-}
 
 .divcont {
     width: 60px;
@@ -224,9 +221,6 @@ canvas {
 #commandes, .divcont {
 	display: inline-block;
 	text-align: center;
-}
-.labels {
-	
 }
 
 
