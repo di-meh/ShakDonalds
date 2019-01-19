@@ -1,17 +1,70 @@
 <!DOCTYPE html>
 <html xml:lang="fr" lang="fr">
+
 <head>
-	 <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-	 <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
-	<meta charset = "UTF-8"/>
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+	<!-- Compiled and minified JavaScript -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet">
+	<meta charset="UTF-8" />
 	<title> WacDonald's </title>
-	<LINK href="style.css" rel="stylesheet" type="text/css"> 
+	<LINK href="style.css" rel="stylesheet" type="text/css">
+
 </head>
+
 <body>
+	<header>
+		<a href="index.php"><img src="mw.png" alt="logo" id="logo" />
+			<h1>WacDonald's</h1>
+		</a>
+	</header>
 	<SECTION id="sectionB">
-	<h1>Boutique</h1>
-	
+		<h1>Boutique</h1>
+		<div class="carousel">
+			<a class="carousel-item" href="#one!"><img src="dessins/bacon.png" alt="Image 1" /></a>
+			<a class="carousel-item" href="#two!"><img src="dessins/salade.png" alt="Image 2" /></a>
+			<a class="carousel-item" href="#three!"><img src="dessins/tomate.png" alt="Image 3" /></a>
+			<a class="carousel-item" href="#four!"><img src="dessins/fromage.png" alt="Image 4" /></a>
+			<a class="carousel-item" href="#five!"><img src="dessins/oignon.png" alt="Image 5" /></a>
+			<a class="carousel-item" href="#six!"><img src="dessins/cornichon.png" alt="Image 6" /></a>
+			<a class="carousel-item" href="#five!"><img src="dessins/pain_bas.png" alt="Image 5" /></a>
+			<a class="carousel-item" href="#five!"><img src="dessins/pain_haut.png" alt="Image 5" /></a>
+			<a class="carousel-item" href="#five!"><img src="dessins/steak.png" alt="Image 5" /></a>
+
+		</div>
+
+
+		<script type="text/javascript">
+
+			document.addEventListener('DOMContentLoaded', function () {
+				var elems = document.querySelectorAll('.carousel');
+				var instances = M.Carousel.init(elems, {
+					duration: 200
+				});
+			});
+
+
+
+		</script>
+
+
+		<div id="boutonsBoutique">
+
+			<button type="button" name="acheter" id="acheter">Acheter</button>
+
+			<form method="post" action='index.php?module=joueur&action=menu'>
+				<input type="submit" name="retourMenu" value="Retour au Menu" id="retourMenu" />
+			</form>
+		</div>
+
 	</SECTION>
 
 </body>
+
 </html>

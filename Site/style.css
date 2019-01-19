@@ -1,121 +1,170 @@
-body{
+body {
 	background-color: #ffdf23;
 	color: #1f532f;
 	font-family: 'Montserrat', "Alfa Slab One";
 }
 
+/*nom jeu + logo , sur toutes les pages */
+
+header h1 {
+	margin: auto;
+	position: absolute;
+	top: 30px;
+	left: 43%;
+	color: #1f532f;
+	text-decoration: none;
+}
+
+#logo {
+	margin-bottom: 50px;
+	position: absolute;
+	left: 30%;
+	top: 30px;
+	width: 100px;
+}
+
+section {
+	margin-top: 150px;
+}
+
+/*section{
+	margin-top: 150px;
+}*/
 
 /*boutique*/
 
-#sectionB{
+#sectionB {
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 20px;
 	width: 850px;
-	height: 850px;
-	margin:auto;
+	height: 650px;
+	margin: auto;
+	margin-top: 180px;
+	padding-bottom: 700px;
 }
 
-#sectionB h1{
+#sectionB h1 {
 	color: white;
 	text-align: center;
 }
 
+/*
+#carouselExampleIndicators{
+	margin:auto;
+	margin-top:30px;
+}
+.bacon, .salade, .tomate{
+	width: 500px;
+	margin-left: 180px;
+}
+.carousel-indicators{
+	margin-top: 200px;
+}
+*/
+
 /*Menu*/
 
+/*
 div{
 	border: 1px solid red;
-}
+}*/
 
-#menu h1{
+#menu h1 {
 	text-align: center;
 }
-#boutons{
+
+#boutons {
 	margin: auto;
 	margin-top: 200px;
 	width: 100%;
 	padding-top: 20px;
 	width: 300px;
-
 }
 
-#divStats{
+#boutonsBoutique {
+	display: block;
+	text-align: center;
+}
+
+#divStats {
 	background-color: rgba(0, 0, 0, 0.5);
 	border-radius: 10px;
 	width: 30%;
 	position: absolute;
 	right: 5px;
-	top:5px;
-
+	top: 5px;
 }
 
-#nouvelleP, #reprendreP{
+#nouvelleP, #reprendreP, #acheter, #retourMenu {
 	background-color: #1f532f;
 	border: 1px solid #1f532f;
 	border-radius: 10px;
 	color: white;
-
 	padding-left: 100px;
 	padding-right: 100px;
-	padding-top:20px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 20px;
 	margin-top: 20px;
-
 	/*animation*/
 	cursor: pointer;
 	box-shadow: 0 5px #999;
 }
-#nouvelleP:hover, #reprendreP:hover{
+
+#nouvelleP:hover, #reprendreP:hover, #connexion:hover, #creaNouv:hover, #inscription:hover, #acheter:hover, #retourMenu:hover {
 	background-color: #163B21;
-}
-#nouvelleP:active, #reprendreP:active{
-	background-color: #163B21;
-  	box-shadow: 0 5px #666;
-  	transform: translateY(4px);
 }
 
-#deco{
+#nouvelleP:active, #reprendreP:active, #connexion:active, #creaNouv:active, #inscription:active, #acheter:active, #retourMenu:active {
+	background-color: #163B21;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
+}
+
+#deco {
 	background-color: #5E6770;
 	border: 1px solid #5E6770;
 	border-radius: 10px;
 	color: white;
 	padding-left: 50px;
 	padding-right: 50px;
-	padding-top:20px;
+	padding-top: 20px;
 	padding-bottom: 20px;
 	font-size: 20px;
 	margin-top: 20px;
 	position: absolute;
 	left: 5px;
-	top:5px;
+	top: 5px;
 	/*animation*/
 	cursor: pointer;
 	box-shadow: 0 5px #999;
 }
-#deco:hover{
+
+#deco:hover {
 	background-color: #444B52;
 }
-#deco:active{
+
+#deco:active {
 	background-color: #444B52;
-  	box-shadow: 0 5px #666;
-  	transform: translateY(4px);
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
 
-
-#divStats h1{
+#divStats h1 {
 	color: white;
 	text-align: center;
 }
-#stats{
+
+#stats {
 	margin-top: 50px;
 	color: white;
 }
-#profil{
+
+#profil {
 	width: 50px;
 	position: absolute;
 	left: 20px;
-	top:20px;
-
+	top: 20px;
 }
 
 /*
@@ -138,77 +187,103 @@ div{
 
 /*bilan fin journée*/
 
-li{
+li {
 	padding-top: 10px;
 }
-#bilanGauche{
+
+#bilanGauche {
 	color: white;
 	font-size: 20px;
 	padding-left: 15px;
 	padding-top: 20px;
-
-}
-#bilanGauche p{
-	padding:20px;
 }
 
-#sousTotal, #total{
+#bilanGauche p {
+	padding: 20px;
+}
+
+#sousTotal, #total {
 	margin-top: 20px;
 }
 
-.trait1, .trait2{
+.trait1, .trait2 {
 	margin-top: 60px;
 	background-color: white;
 	height: 1px;
 	width: 90%;
 }
-.trait2{
+
+.trait2 {
 	margin-top: 350px;
 }
 
-#sectionB h1{
+#sectionB h1 {
 	padding-top: 20px;
 }
 
 /*connexion*/
-header h1{
+
+header h1 {
 	text-align: center;
-
+	display: block;
+	margin-top: 0.75em;
 }
-#co, #crea{
 
-	width: 45%;
-	display: inline-block;
-}
-#crea{
+#co, #crea {
+	display: block;
+	margin: auto;
 	text-align: center;
 }
 
-/*jeu*/
+#connexion, #creaNouv, #inscription {
+	background-color: #1f532f;
+	border: 1px solid #1f532f;
+	border-radius: 10px;
+	color: white;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size: 15px;
+	margin-top: 15px;
+	/*animation*/
+	cursor: pointer;
+	box-shadow: 0 5px #999;
+}
 
+/*Crea compte*/
+
+#titreCrea, #creacompte {
+	text-align: center;
+	margin: auto;
+	display: block;
+}
+
+/*Administrateur*/
+
+/*Jeu*/
 
 canvas {
 	border: 1px solid #d3d3d3;
-    background-color: black;
-    margin: auto;
+	background-color: black;
+	margin: auto;
 	display: block;
 	padding: 0;
 }
 
-
 .divcont {
-    width: 60px;
-    height: 60px;
-    margin: 10px;
-    padding: 10px;
-    border: 1px solid black;
+	width: 60px;
+	height: 60px;
+	margin: 10px;
+	padding: 10px;
+	border: 1px solid black;
 }
 
 #ingredients {
 	width: 100px;
-	height : 580px;
+	height: 580px;
 	float: right;
-	border : 1px solid blue;
+	border: 1px solid blue;
 	text-align: center;
 }
 
@@ -222,6 +297,3 @@ canvas {
 	display: inline-block;
 	text-align: center;
 }
-
-
-

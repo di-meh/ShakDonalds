@@ -1,13 +1,14 @@
 <?php
 require_once'vue_admin.php';
 require_once'modele_admin.php';
+require_once'cont_generique.php';
 
-class ContAdmin{
-	private $vueadmin;
+class ContAdmin extends ContGenerique{
+
 	private $modeleadmin;
 
 	public function __construct(){
-		$this->vueadmin = new VueAdmin();
+		$this->vue = new VueAdmin();
 		$this->modeleadmin = new ModeleAdmin();
 
 		if(!isset($_GET['action'])){
@@ -44,37 +45,37 @@ class ContAdmin{
 	}
 
 	public function ajouti(){
-		$this -> vueadmin -> formajouti();
+		$this -> vue -> formajouti();
 		$this -> modeleadmin -> ajouti();
 	}
 
 	public function ajoutm(){
-		$this -> vueadmin -> formajoutm();
+		$this -> vue -> formajoutm();
 		$this -> modeleadmin -> ajoutm();
 	}
 
 	public function suppri(){
-		$this -> vueadmin -> suppri();
+		$this -> vue -> suppri();
 		$this -> modeleadmin ->suppri();
 	}
 
 	public function supprm(){
-		$this -> vueadmin -> supprm();
+		$this -> vue -> supprm();
 		$this -> modeleadmin -> supprm();
 	}
 
 	public function connexion(){
-		$this-> vueadmin -> affichageCo();
+		$this-> vue -> affichageCo();
 		$this -> modeleadmin -> testco();
 	}
 
 	public function deconnexion(){
-		$this-> vueadmin -> affichageCo();
+		$this-> vue -> affichageCo();
 		$this -> modeleadmin -> deco();
 	}
 
 	public function affichage(){
-		$this-> vueadmin->affichage();
+		$this-> vue->affichage();
 	}
 }
 

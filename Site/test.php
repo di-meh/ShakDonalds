@@ -35,7 +35,7 @@ class BaseDeDonnees extends Connexion{
 	public function totalArgent(){
 		$recette = self::$bdd -> query('select recetteTotal from partie where partie.idJ= $identifiant');
 		$prixaliments = self::$bdd -> query ('select prixAliments from partie where partie.idJ = $identifiant');
-		$pertes = self::$bdd -> query ('select ');
+		$pertes = self::$bdd -> query ('select pertes from partie where partie.idJ=$identifiant');
 		$total = $recette - $prixaliments - $pertes;
 		self::$bdd -> query('update partie set totalArgent = $total where partie.idJ =$identifiant');
 	}

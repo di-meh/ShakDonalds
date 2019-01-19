@@ -37,6 +37,7 @@ class ModeleJoueur extends Connexion{
 					var_dump($res[0]);
 				}
 				var_dump($_SESSION);
+				
 			}
 		}
 	}
@@ -44,6 +45,45 @@ class ModeleJoueur extends Connexion{
 		unset($_SESSION['id']);
 		var_dump($_SESSION);
 		session_destroy();
+	}
+	public function inscription(){
+		if(!isset($_POST['login']) || trim($_POST['login']) =="" || !isset($_POST['mdp1']) || trim($_POST['mdp1'])==""){
+				echo "erreur <br/>";
+		}
+		else{
+			if ($_POST['mdp1']!==$_POST['mdp2']){
+				echo "Mots de passes différents";
+			}
+			else{
+				$newlogin= htmlspecialchars($_POST['login']);
+				$newpseudo = htmlspecialchars($_POST['pseudo']);
+				$newmdp = htmlspecialchars($_POST['mdp1']);
+
+				echo "login : $newlogin" . "<br/>";
+				echo "pseudo : $newpseudo" . "<br/>";
+				echo "mot de passe : $newmdp" . "<br/>";
+
+				//$sql = "insert into joueurs(idJ, loginJ, passwordJ, pseudoJ, argentJ, idN, xpJ) values(default, :login , :mdp, :pseudo, 0, 1, 0)";
+
+				$req = self::$bdd -> prepare('INSERT INTO joueurs(loginJ, passwordJ, pseudoJ, argentJ, xpJ, idN,idP, estAdmin) values(:login , :mdp, :pseudo, 0, 0, 1,NULL ,false)');
+				
+				$req -> bindParam(':login', $newlogin);
+				$req -> bindParam(':pseudo', $newpseudo);
+				$req -> bindParam(':mdp', $newmdp);
+
+				if($req -> execute()){
+					//echo($req);
+					$req -> fetch();
+				}
+				var_dump($req);
+				header('Location: index.php?module=joueur&action=menu');
+				exit();
+
+
+			}
+			
+		}
+
 	}
 
 }

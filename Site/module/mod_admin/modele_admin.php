@@ -105,6 +105,13 @@ class ModeleAdmin extends Connexion{
 				echo "suppression réussie";
 			}
 		}
+		$sql = 'select * from ingredients';
+		$req = self::$bdd -> prepare($sql);
+		$req -> execute();
+		$res = $req -> fetchAll();
+		foreach ($res as $value){
+    		echo $value[0] . " " . $value[1] . "<br/>";
+		}
 	}
 
 	public function supprm(){
@@ -116,6 +123,13 @@ class ModeleAdmin extends Connexion{
 			if($req -> execute()){
 				echo "suppression réussie";
 			}
+		}
+		$sql = 'select * from machines';
+		$req = self::$bdd -> prepare($sql);
+		$req -> execute();
+		$res = $req -> fetchAll();
+		foreach ($res as $value) {
+			echo $value[0] . " " .$value[1] . "<br/>";
 		}
 	}
 

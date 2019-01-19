@@ -19,7 +19,7 @@ function Joueur(nom) {
 }
 */
 var burger = new Image();
-burger.src = "Images/steak.png";
+burger.src = "Images/burger.png";
 
 
 
@@ -33,7 +33,7 @@ var myGameArea = {
 		
 		this.context.font = "50px Montserrat";
 		this.context.fillStyle = "#ffdf23";
-		this.context.fillText("ShakDonalds Le Jeu", this.canvas.width/6, this.canvas.height/2);
+		this.context.fillText("Шакдоналдc", this.canvas.width/4, this.canvas.height/2);
 
 		this.context.beginPath();
 		this.context.rect(150,350,430,100);

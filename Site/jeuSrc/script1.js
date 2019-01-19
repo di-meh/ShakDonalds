@@ -51,8 +51,10 @@ var pain = new Image();
 pain.src = "Images/pain.png";
 var tomate = new Image();
 tomate.src = "Images/tomate.png"
+var burger = new Image();
+burger.src="Images/burger.png";
 
-var bigBurger ;
+var bigBurger;
 
 var myGameArea = {
 	canvas: document.getElementById("canvasJeu"),
@@ -64,7 +66,7 @@ var myGameArea = {
 		
 		this.context.font = "50px Montserrat";
 		this.context.fillStyle = "#ffdf23";
-		this.context.fillText("ShakDonalds Le Jeu", this.canvas.width/6, this.canvas.height/2);
+		this.context.fillText("Шакдоналдc", this.canvas.width/4, this.canvas.height/2);
 
 		this.context.beginPath();
 		this.context.rect(150,350,430,100);
@@ -170,6 +172,7 @@ function estIntérieurIngrédient(evt) {
 		myGameArea.context.fillStyle = "#ffdf23";
 		myGameArea.context.fillText("Bravo, vous avez fait un délicieux burger !", 150, 100);
 
+		myGameArea.context.drawImage(burger, 250,80,200,200);
 		myGameArea.context.beginPath();
 		myGameArea.context.rect(150,250,420,100);
 		myGameArea.context.fillStyle = '#ffdf23';

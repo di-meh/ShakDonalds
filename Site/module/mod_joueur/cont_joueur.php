@@ -1,14 +1,15 @@
 <?php
 require_once'vue_joueur.php';
 require_once'modele_joueur.php';
+require_once'cont_generique.php';
 
-class ContJoueur{
-	private $vuejoueur;
+class ContJoueur extends ContGenerique{
+
 	private $modelejoueur;
 
 	public function __construct(){
-		$this->vuejoueur = new VueJoueur();
 		$this->modelejoueur = new ModeleJoueur();
+		$this->vue = new VueJoueur();
 
 		if(!isset($_GET['action'])){
 			$_GET['action']='co';
@@ -18,7 +19,7 @@ class ContJoueur{
 			break;
 			case 'deco' : $this -> deconnexion();
 			break;
-			case 'nouveau' : $this -> vuejoueur ->affichageNouv();
+			case 'nouveau' : $this -> nouveauJoueur();
 			break;
 			case 'menu' : 
 				if(isset($_SESSION['idJ'])){
@@ -31,21 +32,38 @@ class ContJoueur{
 
 				
 			break;
+			case 'boutique' : 
+				$this -> boutique();
+			break;
 
 		} 
 	}
 
 	public function connexion(){
-		$this-> vuejoueur -> affichageCo();
+		$this-> vue -> affichageCo();
 		$this -> modelejoueur -> testco();
 	}
 
 	public function deconnexion(){
-		$this-> vuejoueur -> affichageCo();
+		$this-> vue-> affichageCo();
 		$this -> modelejoueur -> deco();
 	}
 
-	
+	public function nouveauJoueur(){
+		$this -> vue -> affichageForm();
+		$num=$this -> modelejoueur -> inscription();
+			
+		
+	}
+
+	public function boutique(){
+		$this -> vue -> affichageBoutique();
+	}
+/*
+	public function affichage(){
+		return $this-> vuejoueur->affichageCo();
+	}
+*/
 
 	
 }

@@ -1,42 +1,51 @@
-<?php session_start(); ?>
-<!DOCTYPE html>
-<html xml:lang="fr" lang="fr">
-
-<?php
+<?php session_start(); 
+	require_once'module/mod_admin/mod_admin.php';
+	require_once'module/mod_joueur/mod_joueur.php';
+	require_once'module/mod_commande/mod_commande.php';
 	require_once"connexion.php";
 	
 	Connexion::initConnexion();
 
-	if(!isset($_GET['module'])){
-	$_GET['module']='bienvenue';
+	if(isset($_GET['module'])) {
+		$module = $_GET['module'];
+	} else {
+		$module = 'bienvenue';
 	}
 
-	switch($_GET['module']){
-	case 'admin':
-		require_once'module/mod_admin/mod_admin.php';
-		$module= new ModAdmin();
-
-	break;
-	case 'joueur':
-		require_once'module/mod_joueur/mod_joueur.php';
-		$module = new ModJoueur();
-	break;
-	case 'bienvenue':
-		include('bienvenue.html');
-	break;
-	/*case 'menu':
-		require_once'module/mod_menu/mod_menu.php';
-		$module = new ModMenu();
-	break;*/
-	
+	switch($module){
+		case 'bienvenue':
+			include('bienvenue.html');
+			$vue = null;
+		break;
+		case 'joueur':
+		case 'admin':
+		case 'commande':
+			$module = "mod$module";
+			$mod = new $module();
+			$vue = $mod -> getAffichage();
+		break;
+		default:
+			break;
 	}
-		//inclure page html
 	
-
 ?>
+<!DOCTYPE html>
+<html xml:lang="fr" lang="fr">
 <head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="style.css" />
+	<title>WacDonalds</title>
 </head>
 <body>	
+	<section>
+
+<?php echo $vue;
+var_dump($vue);
+?>	
+
+
+
+</section>
 </body>
 </html>
 

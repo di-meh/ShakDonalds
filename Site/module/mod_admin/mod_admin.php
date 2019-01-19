@@ -1,17 +1,15 @@
 <?php
 require_once'index.php';
 require_once'module/mod_admin/cont_admin.php';
+require_once 'mod_generique.php';
 
-class ModAdmin{
-	private $cont;
+class ModAdmin extends ModGenerique{
 
 	public function __construct(){
-		$this->cont = new ContAdmin();
+		$this->contr = new ContAdmin();
 	}
 	
-	public function affichage(){
-		return $this->cont->affichage();
-	}
+	
 
 }
 

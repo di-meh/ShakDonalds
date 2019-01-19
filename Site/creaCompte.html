@@ -9,22 +9,26 @@
 </head>
 <body>
 	<header>
-		<h1>Création du compte</h1>
+			<a href="index.php"><img src = "mw.png" alt = "logo" id="logo"/>
+			<h1>WacDonald's</h1></a>	
 	</header>
 
-</body>
-	<section>
-		<form method="post" action="truc.php">
+	<section style="margin-right: 3em">
+			<h1 id="titreCrea">Création du compte</h1>
+		<div id="creacompte">
+		<form method="post" action="" >
 		<p>
-			<label>Login</label> : <input type="texte" name="login"/>
-			<label>Pseudo</label> : <input type="texte" name="pseudo"> <br/>
-			<label>Mot de passe</label> : <input type="password" name="mdp1"/>
-			<input type="password" name="mdp2"/>
+			<label>Identifiant</label> : <input style="margin-left:159px;" type="texte" name="login"/><br>
+			<label>Pseudonyme</label> : <input style="margin-left:137px;" type="texte" name="pseudo"> <br>
+			<label>Mot de passe</label> : <input style="margin-left:138px;" type="password" name="mdp1"/><br>
+			<label>Confirmez votre mot de passe</label> : <input type="password" name="mdp2"/>
 
 		</p>
-		<input type="submit" name="Inscription">
+		<input type="submit" name="inscription" value="Inscription" id="inscription">
 
 		</form>
+		</div>
 		
 	</section>
+</body>
 </html>

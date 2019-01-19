@@ -8,7 +8,7 @@ class VueMenu{
 	 	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
 	 	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
 		<meta charset = "UTF-8"/>
-		<title> WacDonald's </title>
+		<title>Шакдоналдс</title>
 		<LINK href="style.css" rel="stylesheet" type="text/css"> 
 
 
@@ -24,7 +24,8 @@ class VueMenu{
 
 		<button type="button" name="reprendreP" id="reprendreP">Reprendre Partie</button>
 		<button type="button" name="nouvelleP" id="nouvelleP">Nouvelle Partie</button>
-
+		<form method="post" action='index.php?module=joueur&action=boutique'><input type="submit" name="boutique" value="Boutique" id="boutiqueB"/>
+		</form>
 		</div>
 
 		<div id="divStats">

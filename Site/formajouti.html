@@ -4,7 +4,7 @@
  	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
  	<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One" rel="stylesheet"> 
 	<meta charset = "UTF-8"/>
-	<title> WacDonald's </title>
+	<title>Шакдоналдс</title>
 	<LINK href="style.css" rel="stylesheet" type="text/css"> 
 </head>
 <body>
@@ -12,23 +12,22 @@
 		<h1>Ajouter un ingrédient</h1>
 	</header>
 
-</body>
-	<section>
+	<section style="text-align: center;">
 		<form method="post" action="index.php?module=admin&action=ajoutingredient">
 		<p>
-			<label>Nom ingrédient</label> : <input type="texte" name="nom"/>
-			<label>Prix ingrédient</label> : <input type="texte" name="prix"> <br/>
-			<label>Description ingrédient</label> : <input type="texte" name="desc"/>
-			<label>Deblocable au niveau</label> : <input type="texte" name="niveau"/>
+			<label>Nom ingrédient</label> : <input style="margin-left:68px;" type="texte" name="nom"/><br>
+			<label>Prix ingrédient</label> : <input style="margin-left:78px;" type="texte" name="prix"> <br>
+			<label>Description ingrédient</label> : <input style="margin-left:15px;" type="texte" name="desc"/><br>
+			<label>Deblocable au niveau</label> : <input style="margin-left:24px;" type="texte" name="niveau"/><br>
 			<label>Appartient à la catégorie</label> : <input type="texte" name="categorie"/>
 		</p>
 		<input type="submit" name="AjoutIngredient">
 
 		</form>
-		<p></p>
-		<p></p>
+		<br>
 		<form method="post" action="index.php?module=admin&action=menu">
 		<input type="submit" value="Retour" name="Retour menu">
 		</form>
 	</section>
+</body>
 </html>
