@@ -34,16 +34,14 @@ class ModeleAdmin extends Connexion{
 
 					//echo "res : ".$res[0];
 					$_SESSION['idJ'] = $res[0];
-					var_dump($res[0]);
+					
 				}
-				var_dump($_SESSION);
 				
 			}
 		}
 	}
 	public function deco(){
 		unset($_SESSION['id']);
-		var_dump($_SESSION);
 		session_destroy();
 	}
 

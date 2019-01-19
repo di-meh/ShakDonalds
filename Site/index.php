@@ -34,14 +34,10 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="style.css" />
-	<title>WacDonalds</title>
+	<title>Шакдоналдс</title>
 </head>
 <body>	
-	<section>
-
-<?php echo $vue;
-var_dump($vue);
-?>	
+<section>	
 
 
 

@@ -34,16 +34,14 @@ class ModeleJoueur extends Connexion{
 
 					//echo "res : ".$res[0];
 					$_SESSION['idJ'] = $res[0];
-					var_dump($res[0]);
 				}
-				var_dump($_SESSION);
+	
 				
 			}
 		}
 	}
 	public function deco(){
 		unset($_SESSION['id']);
-		var_dump($_SESSION);
 		session_destroy();
 	}
 	public function inscription(){
@@ -75,7 +73,6 @@ class ModeleJoueur extends Connexion{
 					//echo($req);
 					$req -> fetch();
 				}
-				var_dump($req);
 				header('Location: index.php?module=joueur&action=menu');
 				exit();
 

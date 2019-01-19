@@ -13,7 +13,7 @@
 <body>
 	<header>
 		<a href="index.php"><img src = "mw.png" alt = "logo" id="logo"/></a>
-		<h1>WacDonald's</h1>
+		<h1>Шакдоналдс</h1>
 	</header>
 	<SECTION id="menu">
 		<div id="lienBoutique">
@@ -21,9 +21,8 @@
 
 	</div>
 	<div id="boutons">
-
-		<button type="button" name="reprendreP" id="reprendreP">Reprendre Partie</button>
-		<button type="button" name="nouvelleP" id="nouvelleP">Nouvelle Partie</button>
+		<!--<button type="button" name="reprendreP" id="reprendreP">Reprendre Partie</button>-->
+		<button type="button" name="nouvelleP" id="nouvelleP" onclick="location.href='jeu1.html'">Nouvelle Partie</button>
 		<button type="button" name="boutique" id="boutique">Boutique</button>
 
 	

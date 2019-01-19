@@ -22,9 +22,9 @@ class VueMenu{
 		?>
 		<div id="boutons">
 
-		<button type="button" name="reprendreP" id="reprendreP">Reprendre Partie</button>
+		<!--<button type="button" name="reprendreP" id="reprendreP">Reprendre Partie</button>-->
 		<button type="button" name="nouvelleP" id="nouvelleP">Nouvelle Partie</button>
-		<form method="post" action='index.php?module=joueur&action=boutique'><input type="submit" name="boutique" value="Boutique" id="boutiqueB"/>
+		<form method="post" action='index.php?module=joueur&action=boutique'><input type="submit" name="boutique" value="Boutique" id="boutique"/>
 		</form>
 		</div>
 
@@ -33,12 +33,6 @@ class VueMenu{
 		<img src="profil.png" id="profil">
 
 		<div id="stats">
-
-
-
-		
-	
-
 			<ul style="list-style-type: none;">
 				<li>Nom : <?php echo $newNom ?></li>
 				<li>Partie en cours : </li>

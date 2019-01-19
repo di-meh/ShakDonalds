@@ -18,7 +18,6 @@ class ModeleMenu extends Connexion{
 			$newNom=$res[0];
 			return $newNom;
 		}
-		var_dump($res[0]);
 
 	}catch(PDOException $e){
 		echo "erreur";
